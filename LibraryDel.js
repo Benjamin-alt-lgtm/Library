@@ -37,9 +37,17 @@ let LIBRARY =[
     ]
     
 //DELTE BOOK
-function deleteBookAtIndexTwo(){
- LIBRARY.splice(2, 1,)
- console.log('Library after deleting a book')
- console.log (LIBRARY)
+// function deleteBookAtIndexTwo(){
+//  LIBRARY.splice(2, 1,)
+// //  console.log('Library after deleting a book')
+// //  console.log (LIBRARY)
+// }
+// deleteBookAtIndexTwo()
+
+//DELETING BOOK BY ID 
+function deleteBookById(bookId){
+    NEWLIBRARY = LIBRARY.filter(book => book.Id !==bookId)
+    console.log(`Book with ID ${bookId} has been removed`)
+    console.log(NEWLIBRARY)
 }
-deleteBookAtIndexTwo()
+deleteBookById(4)
